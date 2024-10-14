@@ -1,4 +1,5 @@
-import map from '../assets/map.jpg';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const Map = () => {
   return (
@@ -21,9 +22,9 @@ const Map = () => {
         <h2 className='section-heading mb-[2.81rem]'>Geographic Coverage</h2>
 
         <div className='mx-auto max-w-[56.57rem]'>
-          <img
+          <Image
             className='size-full object-contain'
-            src={map}
+            src={assets.map}
             alt='Geographic Coverage'
           />
         </div>

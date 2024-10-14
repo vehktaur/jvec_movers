@@ -1,8 +1,9 @@
-import homeowners from '../assets/homeowners.svg';
-import renters from '../assets/renters.svg';
-import businesses from '../assets/businesses.svg';
-import property_managers from '../assets/property_managers.svg';
+'use client';
+
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 const ClientsWeServe = () => {
   const clients = [
@@ -10,25 +11,25 @@ const ClientsWeServe = () => {
       title: 'Homeowners',
       description:
         'Whether moving across town or to a new state, we help homeowners transition smoothly.',
-      icon: homeowners,
+      icon: assets.homeowners,
     },
     {
       title: 'Renters',
       description:
         'We assist renters with their moves, ensuring they leave their rental properties clean and in good condition.',
-      icon: renters,
+      icon: assets.renters,
     },
     {
       title: 'Businesses',
       description:
         'Our commercial moving services help businesses relocate with minimal disruption.',
-      icon: businesses,
+      icon: assets.businesses,
     },
     {
       title: 'Property Managers',
       description:
         'We partner with property managers to offer seamless moving services for their tenants.',
-      icon: property_managers,
+      icon: assets.property_managers,
     },
   ];
 
@@ -55,7 +56,7 @@ const ClientsWeServe = () => {
                 </h4>
 
                 <div className='flex items-center justify-center overflow-hidden rounded-full bg-[#EAEAEA] p-4 ~mb-[1.62rem]/8 ~size-[5.13rem]/[8.19rem]'>
-                  <img
+                  <Image
                     className='block object-contain'
                     src={icon}
                     alt={title}

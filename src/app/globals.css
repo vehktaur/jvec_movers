@@ -10,6 +10,10 @@
 }
 
 @layer utilities {
+  .footer-heading {
+    @apply mb-4 text-xl font-semibold text-red-light;
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -49,7 +53,7 @@
 #blogs .swiper-button-prev {
   @apply -left-4 ml-0 hidden sm:block;
   &::after {
-    content: url('/src/assets/swiper-arrow-down.svg') !important;
+    content: url('/swiper-arrow.svg') !important;
   }
 }
 
@@ -57,7 +61,7 @@
   @apply -right-4 mr-0 hidden rotate-180 sm:block;
 
   &::after {
-    content: url('/src/assets/swiper-arrow-down.svg') !important;
+    content: url('/swiper-arrow.svg') !important;
   }
 }
 

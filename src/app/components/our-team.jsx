@@ -1,12 +1,11 @@
-import moving_techniques from '../assets/moving_techniques.svg';
-import safety_protocols from '../assets/safety_protocols.svg';
-import cs_standards from '../assets/cs_standards.svg';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const Card = ({ img, caption }) => {
   return (
     <div>
       <div className='mb-[0.89rem] max-h-[22rem] max-w-[24.75rem] overflow-hidden rounded-[0.84rem] md:mb-4 md:rounded-[0.94rem]'>
-        <img className='size-full object-cover' src={img} alt={caption} />
+        <Image className='size-full object-cover' src={img} alt={caption} />
       </div>
 
       <p className='text-center font-medium ~text-lg/2xl'>{caption}</p>
@@ -16,16 +15,19 @@ const Card = ({ img, caption }) => {
 
 const OurTeam = () => {
   return (
-    <section className='padding-inline bg-our-team relative bg-cover bg-no-repeat ~pt-[4.4rem]/[2.4rem] ~pb-[6.5rem]/[5.5rem]'>
+    <section className='padding-inline relative bg-our-team bg-cover bg-no-repeat ~pt-[4.4rem]/[2.4rem] ~pb-[6.5rem]/[5.5rem]'>
       <div className='absolute inset-0 z-0 bg-black bg-opacity-90' />
       <div className='relative z-[1] mx-auto max-w-7xl text-white'>
         <h2 className='section-heading mb-2 text-red-500'>Our Team</h2>
         <h3 className='section-subheading'>Highly trained professionals in</h3>
 
         <div className='grid ~mt-8/[5.81rem] ~gap-6/[2.88rem] sm:grid-cols-3'>
-          <Card img={moving_techniques} caption='Moving Techniques' />
-          <Card img={safety_protocols} caption='Safety Protocols' />
-          <Card img={cs_standards} caption='Customer Service Standards' />
+          <Card img={assets.moving_techniques} caption='Moving Techniques' />
+          <Card img={assets.safety_protocols} caption='Safety Protocols' />
+          <Card
+            img={assets.cs_standards}
+            caption='Customer Service Standards'
+          />
         </div>
 
         <p className='mx-auto max-w-[79rem] text-center ~text-sm/lg ~mt-8/[4.31rem]'>

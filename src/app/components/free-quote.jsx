@@ -1,4 +1,5 @@
-import arrow_right from '../assets/arrow-right.svg';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const FreeQuote = () => {
   return (
@@ -18,13 +19,13 @@ const FreeQuote = () => {
           </div>
 
           <div className='w-full'>
-            <h2 className='slg:~text-[2.5rem]/[4.49rem] flex items-center justify-between font-medium text-red-light ~text-3xl/5xl'>
+            <h2 className='flex items-center justify-between font-medium text-red-light ~text-3xl/5xl slg:~text-[2.5rem]/[4.49rem]'>
               Free Quote
               <span className='ml-auto ~w-10/[5.69rem]'>
-                <img
+                <Image
                   className='w-full object-contain'
-                  src={arrow_right}
-                  alt=''
+                  src={assets.arrow_right}
+                  alt='arrow right'
                 />
               </span>
             </h2>

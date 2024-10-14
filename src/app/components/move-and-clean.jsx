@@ -1,4 +1,5 @@
-import cleaning_services from '../assets/cleaning_services.jpg';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const MoveClean = () => {
   return (
@@ -21,9 +22,9 @@ const MoveClean = () => {
             </a>
           </div>
           <div className='mx-auto max-w-[15.44rem] sm:mx-0'>
-            <img
+            <Image
               className='size-full object-contain'
-              src={cleaning_services}
+              src={assets.cleaning_services}
               alt='MD Environmental Services'
             />
           </div>

@@ -2,16 +2,25 @@
 
 import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
 
-export default {
-  content: { files: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], extract },
+module.exports = {
+  content: {
+    files: [
+      './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    extract,
+  },
   theme: {
     screens,
     fontSize,
     extend: {
       backgroundImage: {
-        'why-us': "url('/src/assets/grey_vector_curve.svg')",
-        'our-team': "url('/src/assets/chair_holding.jpg')",
-        'app-download': "url('/src/assets/stressless_movers.png')",
+        'why-us': "url('/grey_vector_curve.svg')",
+        'our-team': "url('/chair_holding.jpg')",
+        'app-download': "url('/stressless_movers.png')",
+        footer: "url('/orange_vector_curve.svg')",
       },
       colors: {
         'red-primary': '#FF0000',
@@ -21,7 +30,7 @@ export default {
         'gray-slate': '#282B2E;',
       },
       gridTemplateColumns: {
-        four: 'repeat(4, minmax(16.38rem, 1fr))'
+        four: 'repeat(4, minmax(16.38rem, 1fr))',
       },
       screens: {
         slg: '52rem',

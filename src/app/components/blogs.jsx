@@ -1,9 +1,12 @@
+'use client';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-import relocating from '../assets/relocating.jpg';
 import { Navigation, Pagination } from 'swiper/modules';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
 
 const blog = {
-  img: relocating,
+  img: assets.relocating,
   date: 'JULY 10, 2024',
   title:
     'Settling into a new home: Strategies for an effortless movement, hassle-free',
@@ -64,7 +67,7 @@ const Blogs = () => {
               >
                 <article className='max-w-[22.5rem] border border-[#535558]'>
                   <div className='w-full'>
-                    <img
+                    <Image
                       className='size-full object-cover'
                       src={img}
                       alt={title}

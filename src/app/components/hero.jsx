@@ -1,10 +1,15 @@
-import box_holding from '../assets/box_holding.jpg';
+'use client';
+
+import { Typewriter } from 'react-simple-typewriter';
+
+import Image from 'next/image';
+import { assets } from '@/assets/assets';
 
 const Hero = () => {
   return (
     <section className='bg-gray-slate'>
       <div className='mx-auto flex w-full max-w-[100rem] flex-col text-center text-white sm:flex-row sm:text-left'>
-        <div className='px-5 ~pt-[3.44rem]/[8.66rem] ~pb-[3.49rem]/[13.41rem] sm:px-10'>
+        <div className='px-5 ~pt-[3.44rem]/[8.66rem] ~pb-[3.49rem]/[13.41rem] sm:ms-auto sm:px-10'>
           <div className='max-w-[42.62rem] sm:ms-auto'>
             <h1 className='grid font-extrabold ~text-[2.13rem]/[4.34rem]'>
               <div className='leading-normal'>
@@ -15,8 +20,11 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className='~text-sm/[1.3125rem] ~my-[0.82rem]/6'>
-              Professional and affordable. Fully insured.
+            <p className='min-h-8 ~text-sm/[1.3125rem] ~my-[0.82rem]/6'>
+              <Typewriter
+                words={['Professional and affordable. Fully insured.']}
+                loop={false}
+              />
             </p>
           </div>
 
@@ -28,9 +36,9 @@ const Hero = () => {
           </a>
         </div>
         <div className='max-w-[42.19rem] [transform:rotateY(180deg)] sm:rotate-0 xl:[transform:rotateY(180deg)]'>
-          <img
+          <Image
             className='size-full object-cover'
-            src={box_holding}
+            src={assets.box_holding}
             alt='Movers holding boxes'
           />
         </div>

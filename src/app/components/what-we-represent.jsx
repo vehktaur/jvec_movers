@@ -1,13 +1,15 @@
-import box_lifting from '../assets/box_lifting.jpg';
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+
 const WhatWeRepresent = () => {
   return (
     <section className='padding-inline bg-[#EAEAEA] ~pt-[3.31rem]/[9.12rem] ~pb-[3.31rem]/32'>
       <div className='mx-auto max-w-7xl'>
         <div className='flex flex-col items-center sm:flex-row'>
           <div className='max-w-[52.25rem]'>
-            <img
+            <Image
               className='size-full object-cover'
-              src={box_lifting}
+              src={assets.box_lifting}
               alt='Movers moving boxes'
             />
           </div>
