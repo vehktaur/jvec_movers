@@ -31,9 +31,9 @@ const Footer = () => {
 
   return (
     <footer className='padding-inline bg-[#292D32] bg-footer bg-contain bg-bottom bg-no-repeat pt-[4.75rem] ~pb-[12.58rem]/[16.56rem] sm:pt-[4.13rem]'>
-      <div className='mx-auto max-w-7xl text-center text-white sm:text-left'>
+      <div className='mx-auto max-w-7xl text-center text-white ~text-base/lg sm:text-left'>
         <div className='grid justify-items-center gap-10 sm:grid-cols-3 lg:grid-cols-4'>
-          <div className='~text-base/lg'>
+          <div>
             <div className='mx-auto mb-[0.44rem] w-[8.31rem] sm:mx-0'>
               <img className='w-full' src='/jvec_logo.svg' alt='logo' />
             </div>

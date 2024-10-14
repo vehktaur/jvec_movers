@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
 
             <nav>
-              {/* Desktop NavMenu */}
+              {/* Desktop Nav Menu */}
               <div className={`hidden slg:block`}>
                 <ul
                   className={`flex flex-row items-center gap-6 text-gray-neutral ~text-sm/lg`}
@@ -74,6 +74,7 @@ const Navbar = () => {
                 </ul>
               </div>
 
+              {/* Mobile Nav Menu */}
               <AnimatePresence>
                 {menuOpen && (
                   <motion.div
@@ -83,7 +84,7 @@ const Navbar = () => {
                     className={`${menuOpen ? 'absolute inset-x-0 top-full bg-gray-slate pb-8 pt-4' : ''} sm:px-12 slg:hidden`}
                   >
                     <ul
-                      className={`flex flex-col items-center gap-6 text-gray-neutral ~text-sm/lg sm:flex-row`}
+                      className={`flex flex-col items-center gap-6 text-gray-neutral ~text-base/lg sm:flex-row`}
                     >
                       <li>
                         <a

@@ -20,7 +20,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className='min-h-8 ~text-sm/[1.3125rem] ~my-[0.82rem]/6'>
+            <p className='min-h-8 ~text-base/[1.3125rem] ~my-[0.82rem]/6'>
               <Typewriter
                 words={['Professional and affordable. Fully insured.']}
                 loop={false}
