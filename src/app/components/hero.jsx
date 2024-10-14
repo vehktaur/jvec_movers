@@ -40,6 +40,7 @@ const Hero = () => {
             className='size-full object-cover'
             src={assets.box_holding}
             alt='Movers holding boxes'
+            placeholder='blur'
           />
         </div>
       </div>
