@@ -60,6 +60,7 @@ const ClientsWeServe = () => {
                     className='block object-contain'
                     src={icon}
                     alt={title}
+                    placeholder='blur'
                   />
                 </div>
 

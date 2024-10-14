@@ -41,6 +41,8 @@ const Hero = () => {
             src={assets.box_holding}
             alt='Movers holding boxes'
             placeholder='blur'
+            width={600}
+            priority={true}
           />
         </div>
       </div>

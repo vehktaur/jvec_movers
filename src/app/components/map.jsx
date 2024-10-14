@@ -26,6 +26,7 @@ const Map = () => {
             className='size-full object-contain'
             src={assets.map}
             alt='Geographic Coverage'
+            placeholder='blur'
           />
         </div>
       </div>

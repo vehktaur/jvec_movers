@@ -5,7 +5,7 @@ const Card = ({ img, caption }) => {
   return (
     <div>
       <div className='mb-[0.89rem] max-h-[22rem] max-w-[24.75rem] overflow-hidden rounded-[0.84rem] md:mb-4 md:rounded-[0.94rem]'>
-        <Image className='size-full object-cover' src={img} alt={caption} />
+        <Image className='size-full object-cover' src={img} alt={caption} placeholder='blur' />
       </div>
 
       <p className='text-center font-medium ~text-lg/2xl'>{caption}</p>

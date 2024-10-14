@@ -71,6 +71,7 @@ const Blogs = () => {
                       className='size-full object-cover'
                       src={img}
                       alt={title}
+                      placeholder='blur'
                     />
                   </div>
                   <div className='px-4 pt-6 text-center ~pb-[1.29rem]/[1.31rem] sm:text-left'>

@@ -11,6 +11,8 @@ const WhatWeRepresent = () => {
               className='size-full object-cover'
               src={assets.box_lifting}
               alt='Movers moving boxes'
+              placeholder='blur'
+              priority={true}
             />
           </div>
           <div className='-mt-[6rem] px-[0.69rem] text-white sm:mt-0'>
