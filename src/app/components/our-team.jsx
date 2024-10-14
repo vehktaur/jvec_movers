@@ -15,7 +15,7 @@ const Card = ({ img, caption }) => {
 
 const OurTeam = () => {
   return (
-    <section className='padding-inline relative bg-our-team bg-cover bg-no-repeat ~pt-[4.4rem]/[2.4rem] ~pb-[6.5rem]/[5.5rem]'>
+    <section className='padding-inline relative bg-our-team bg-cover bg-fixed bg-no-repeat ~pt-[4.4rem]/[2.4rem] ~pb-[6.5rem]/[5.5rem]'>
       <div className='absolute inset-0 z-0 bg-black bg-opacity-90' />
       <div className='relative z-[1] mx-auto max-w-7xl text-white'>
         <h2 className='section-heading mb-2 text-red-500'>Our Team</h2>
