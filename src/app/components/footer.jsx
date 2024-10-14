@@ -63,7 +63,7 @@ const Footer = () => {
               </h3>
               <ul className='space-y-3'>
                 {residentialMovingLinks.map((link) => (
-                  <li>
+                  <li key={link.label}>
                     <a
                       className='block transition-colors duration-300 hover:text-red-300'
                       href={link.href}
@@ -81,7 +81,7 @@ const Footer = () => {
               </h3>
               <ul className='space-y-3'>
                 {specialtyMovesLinks.map((link) => (
-                  <li>
+                  <li key={link.label}>
                     <a
                       className='block transition-colors duration-300 hover:text-red-300'
                       href={link.href}
@@ -99,7 +99,7 @@ const Footer = () => {
 
             <ul className='space-y-3'>
               {quickLinks.map((link) => (
-                <li>
+                <li key={link.label}>
                   <a
                     className='block transition-colors duration-300 hover:text-red-300'
                     href={link.href}

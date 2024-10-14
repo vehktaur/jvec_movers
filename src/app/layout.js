@@ -10,7 +10,7 @@ import { Outfit } from 'next/font/google';
 // If loading a variable font, you don't need to specify the font weight
 const outfit = Outfit({
   subsets: ['latin'],
-  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 export const metadata = {
