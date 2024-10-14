@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    color: #121212;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .padding-inline {
+    @apply px-5 sm:~px-8/20;
+  }
+
+  .section-heading {
+    @apply text-center font-bold uppercase ~text-2xl/5xl;
+  }
+  .section-subheading {
+    @apply text-center font-semibold uppercase ~text-lg/[2rem];
+  }
+
+  .transition-hamburger-close {
+    transition:
+      y 250ms ease-in 250ms,
+      rotate 250ms ease-in,
+      opacity 250ms 250ms;
+    transform-origin: center;
+  }
+
+  .transition-hamburger-open {
+    transition:
+      y 250ms ease-in,
+      rotate 250ms ease-in 250ms,
+      opacity 250ms 250ms;
+  }
+}
+
+/* CUSTOM STYLES FOR SWIPER IN THE BLOGS COMPONENT */
+#blogs .swiper {
+  @apply overflow-y-visible pb-8 ~px-6/10;
+}
+
+#blogs .swiper-button-prev {
+  @apply -left-4 ml-0 hidden sm:block;
+  &::after {
+    content: url('/src/assets/swiper-arrow-down.svg') !important;
+  }
+}
+
+#blogs .swiper-button-next {
+  @apply -right-4 mr-0 hidden rotate-180 sm:block;
+
+  &::after {
+    content: url('/src/assets/swiper-arrow-down.svg') !important;
+  }
+}
+
+#blogs .swiper-pagination {
+  @apply bottom-0 ml-0 sm:hidden;
+}
+#blogs .swiper-pagination-bullet {
+  @apply bg-red-primary;
+}
