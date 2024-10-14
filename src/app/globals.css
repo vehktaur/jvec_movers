@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  /* Overall page Styles */
   body {
-    font-family: 'Outfit', sans-serif;
     color: #121212;
   }
 }
 
 @layer utilities {
+  /* Utility Classes / Styles */
   .footer-heading {
     @apply mb-4 text-xl font-semibold text-red-light;
   }
@@ -29,6 +30,7 @@
     @apply text-center font-semibold uppercase ~text-lg/[2rem];
   }
 
+  /* Hamburger Icon Animation */
   .transition-hamburger-close {
     transition:
       y 250ms ease-in 250ms,

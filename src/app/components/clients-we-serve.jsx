@@ -4,8 +4,8 @@ import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 const ClientsWeServe = () => {
+  // Array of client data
   const clients = [
     {
       title: 'Homeowners',
@@ -36,11 +36,15 @@ const ClientsWeServe = () => {
   return (
     <section className='padding-inline ~pt-10/20 ~pb-24/36'>
       <div className='mx-auto max-w-7xl'>
+        {/* Section heading */}
         <h2 className='section-heading mb-2 text-[#535558]'>
           Clients we Serve
         </h2>
+
+        {/* Subheading */}
         <h3 className='section-subheading'>Our services cater to</h3>
 
+        {/* Swiper component for client slides */}
         <Swiper className='~mt-8/20' slidesPerView={'auto'} spaceBetween={20}>
           {clients.map(({ title, description, icon }, index) => (
             <SwiperSlide
@@ -51,10 +55,12 @@ const ClientsWeServe = () => {
               }}
             >
               <div className='h-full bg-[#F4F4F4] py-6 ~px-6/[1.63rem]'>
+                {/* Client title */}
                 <h4 className='mb-[1.62rem] font-semibold uppercase ~text-base/xl sm:mb-4'>
                   {title}
                 </h4>
 
+                {/* Circular icon container */}
                 <div className='flex items-center justify-center overflow-hidden rounded-full bg-[#EAEAEA] p-4 ~mb-[1.62rem]/8 ~size-[5.13rem]/[8.19rem]'>
                   <Image
                     className='block object-contain'
@@ -63,6 +69,7 @@ const ClientsWeServe = () => {
                   />
                 </div>
 
+                {/* Client description */}
                 <p className='~text-sm/lg'>{description}</p>
               </div>
             </SwiperSlide>

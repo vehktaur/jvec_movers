@@ -1,6 +1,7 @@
 import { FacebookIcon, WhatsappIcon } from '@/assets/icons';
 
 const Footer = () => {
+  // Links for different footer sections
   const residentialMovingLinks = [
     { label: 'Complete Packing', href: '#' },
     { label: 'Loading and Unloading', href: '#' },
@@ -51,6 +52,7 @@ const Footer = () => {
             </a>
           </div>
 
+          {/* Services Section */}
           <div>
             <h2 className='footer-heading'>SERVICES</h2>
 
@@ -107,6 +109,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links Section */}
           <div>
             <h2 className='footer-heading'>QUICK LINKS</h2>
 
@@ -124,6 +127,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact Us Section */}
           <div className='text-center sm:text-left'>
             <div>
               <h2 className='footer-heading'>CONTACT US</h2>
@@ -153,6 +157,7 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* Follow Us Section */}
             <div className='~mt-10/14'>
               <h2 className='footer-heading'>FOLLOW US</h2>
               <p>
