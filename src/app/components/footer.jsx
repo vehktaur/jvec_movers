@@ -15,9 +15,6 @@ const Footer = () => {
   const specialtyMovesLinks = [
     { label: 'Delicate Items', href: '#' },
     { label: 'Heavy Furniture', href: '#' },
-    { label: 'Art and Antiques', href: '#' },
-    { label: 'Piano Moving', href: '#' },
-    { label: 'Appliance Moving', href: '#' },
   ];
 
   const quickLinks = [
@@ -90,6 +87,22 @@ const Footer = () => {
                     </a>
                   </li>
                 ))}
+              </ul>
+            </div>
+
+            <div className='mt-4'>
+              <h3 className='mb-3 font-medium text-gray-steel ~text-base/xl'>
+                Cleaning Services
+              </h3>
+              <ul className='space-y-3'>
+                <li>
+                  <a
+                    className='block transition-colors duration-300 hover:text-red-300'
+                    href='#'
+                  >
+                    Post-Move Cleaning
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
