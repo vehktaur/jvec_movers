@@ -32,7 +32,8 @@ const Navbar = () => {
                 <ul
                   className={`flex flex-row items-center gap-6 text-gray-neutral ~text-sm/lg`}
                 >
-                  <li>
+                  <li className='group relative'>
+                    <span className='absolute right-0 h-[5px] w-0 bg-red-primary transition-all duration-300 ~top-[2.3rem]/[3.9rem] group-hover:w-[70%]' />
                     <a
                       className='block transition duration-300 hover:text-white'
                       href='#'
@@ -40,7 +41,8 @@ const Navbar = () => {
                       Home
                     </a>
                   </li>
-                  <li>
+                  <li className='group relative'>
+                    <span className='absolute right-0 h-[5px] w-0 bg-red-primary transition-all duration-300 ~top-[2.3rem]/[3.9rem] group-hover:w-[70%]' />
                     <a
                       className='block transition duration-300 hover:text-white'
                       href='#'
@@ -48,25 +50,28 @@ const Navbar = () => {
                       About
                     </a>
                   </li>
-                  <li>
+                  <li className='group relative'>
+                    <span className='absolute right-0 h-[5px] w-0 bg-red-primary transition-all duration-300 ~top-[2.3rem]/[3.9rem] group-hover:w-[70%]' />
                     <button
                       className='group flex items-center transition duration-300 hover:text-white'
                       href='#'
                     >
                       Services
-                      <ArrowDownIcon className='transition duration-300 group-hover:stroke-white group-hover:[transform:rotateX(-180deg)]' />
+                      <ArrowDownIcon className='transition duration-300 group-hover:rotate-180 group-hover:stroke-white' />
                     </button>
                   </li>
-                  <li>
+                  <li className='group relative'>
+                    <span className='absolute right-0 h-[5px] w-0 bg-red-primary transition-all duration-300 ~top-[2.3rem]/[3.9rem] group-hover:w-[70%]' />
                     <button
                       className='group flex items-center transition duration-300 hover:text-white'
                       href='#'
                     >
                       More
-                      <ArrowDownIcon className='transition duration-300 group-hover:stroke-white group-hover:[transform:rotateX(-180deg)]' />
+                      <ArrowDownIcon className='transition duration-300 group-hover:rotate-180 group-hover:stroke-white' />
                     </button>
                   </li>
-                  <li>
+                  <li className='group relative'>
+                    <span className='absolute right-0 h-[5px] w-0 bg-red-primary transition-all duration-300 ~top-[2.3rem]/[3.9rem] group-hover:w-[70%]' />
                     <a
                       className='block transition duration-300 hover:text-white'
                       href='#'
