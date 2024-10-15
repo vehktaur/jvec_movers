@@ -46,7 +46,7 @@ const Footer = () => {
 
             <a
               href='#'
-              className='mx-auto mt-4 block max-w-[10.75rem] bg-red-primary text-center font-medium text-white ~px-4/[2.4rem] ~py-[0.32rem]/[0.62rem] sm:mx-0'
+              className='mx-auto mt-4 block max-w-[10.75rem] bg-red-primary text-center font-medium text-white transition-all duration-300 ~px-4/[2.4rem] ~py-[0.32rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700 sm:mx-0'
             >
               Free Quote
             </a>

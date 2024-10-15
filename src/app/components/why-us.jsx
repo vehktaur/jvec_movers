@@ -41,10 +41,12 @@ const WhyUs = () => {
         initial='hidden'
         whileInView='visible'
         variants={variants.container}
+        viewport={{ once: true }}
         className='mx-auto flex w-full max-w-[84.38rem] flex-col justify-between gap-5 lg:flex-row'
       >
         {/* Left column */}
         <motion.div
+          custom={300}
           variants={variants.slideUp}
           className='mx-auto max-w-[25.81rem] lg:mx-0'
         >
@@ -63,7 +65,7 @@ const WhyUs = () => {
           {/* Call-to-action button */}
           <a
             href='#'
-            className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] lg:mx-0'
+            className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white transition-all duration-300 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700 lg:mx-0'
           >
             Learn More
           </a>

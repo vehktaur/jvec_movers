@@ -8,7 +8,7 @@ import variants from '@/utils/variants';
 // Card Component to display individual cards with an image and caption
 const Card = ({ img, caption }) => {
   return (
-    <div>
+    <motion.div variants={variants.staggerFadeIn}>
       {/* Image container */}
       <div className='mb-[0.89rem] max-h-[22rem] max-w-[24.75rem] overflow-hidden rounded-[0.84rem] md:mb-4 md:rounded-[0.94rem]'>
         {/* Image component */}
@@ -17,7 +17,7 @@ const Card = ({ img, caption }) => {
 
       {/* Image Caption  */}
       <p className='text-center font-medium ~text-lg/2xl'>{caption}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -34,6 +34,7 @@ const OurTeam = () => {
           initial='hidden'
           whileInView='visible'
           variants={variants.slideUp}
+          viewport={{ once: true }}
         >
           {/* Section heading */}
           <h2 className='section-heading mb-2 text-red-500'>Our Team</h2>
@@ -45,7 +46,13 @@ const OurTeam = () => {
         </motion.div>
 
         {/* Grid layout for the cards */}
-        <div className='grid ~mt-8/[5.81rem] ~gap-6/[2.88rem] sm:grid-cols-3'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          variants={variants.staggerFadeIn}
+          viewport={{ once: true }}
+          className='grid ~mt-8/[5.81rem] ~gap-6/[2.88rem] sm:grid-cols-3'
+        >
           {/* Card components for displaying team skills */}
           <Card img={assets.moving_techniques} caption='Moving Techniques' />
           <Card img={assets.safety_protocols} caption='Safety Protocols' />
@@ -53,10 +60,16 @@ const OurTeam = () => {
             img={assets.cs_standards}
             caption='Customer Service Standards'
           />
-        </div>
+        </motion.div>
 
         {/* Paragraph describing the team's expertise */}
-        <p className='mx-auto max-w-[79rem] text-center ~text-sm/lg ~mt-8/[4.31rem]'>
+        <motion.p
+          initial='hidden'
+          whileInView='visible'
+          variants={variants.slideUp}
+          viewport={{ once: true }}
+          className='mx-auto max-w-[79rem] text-center ~text-sm/lg ~mt-8/[4.31rem]'
+        >
           Our team comprises highly trained professionals who can handle moves
           of all sizes, from small apartments to large commercial relocations.
           Led by our founder and CEO,{' '}
@@ -65,15 +78,19 @@ const OurTeam = () => {
           moving techniques, safety protocols, and customer service standards to
           ensure your belongings are handled with the utmost care and
           professionalism.
-        </p>
+        </motion.p>
 
         {/* Call-to-action button */}
-        <a
+        <motion.a
+          initial='hidden'
+          whileInView='visible'
+          variants={variants.bounceIn}
+          viewport={{ once: true }}
           href='#'
-          className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem]'
+          className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white transition-[border-radius,background-color] duration-300 ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700'
         >
           Learn More
-        </a>
+        </motion.a>
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ const MoveClean = () => {
             {/* Learn more button*/}
             <a
               href='#'
-              className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] sm:mx-0'
+              className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white transition-all duration-300 ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700 sm:mx-0'
             >
               Learn More
             </a>

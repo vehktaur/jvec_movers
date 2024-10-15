@@ -153,7 +153,7 @@ const Navbar = () => {
             {/* Free Quote button */}
             <a
               href='#'
-              className='block max-w-[10.75rem] bg-red-primary text-center font-medium text-white ~px-4/[2.4rem] ~py-[0.32rem]/[0.62rem]'
+              className='block max-w-[10.75rem] bg-red-primary text-center font-medium text-white transition-all duration-300 ~px-4/[2.4rem] ~py-[0.32rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700'
             >
               Free Quote
             </a>

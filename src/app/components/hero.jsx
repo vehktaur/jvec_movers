@@ -34,7 +34,7 @@ const Hero = () => {
           {/* CTA button */}
           <a
             href='#'
-            className='max-w-[11rem] bg-red-primary text-center font-medium ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem]'
+            className='max-w-[11rem] bg-red-primary text-center font-medium transition-all duration-300 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700'
           >
             Get Started
           </a>

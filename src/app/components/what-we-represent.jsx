@@ -1,15 +1,25 @@
+'use client';
+
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import variants from '@/utils/variants';
 
 const WhatWeRepresent = () => {
   return (
     <section className='padding-inline bg-[#EAEAEA] ~pt-[3.31rem]/[9.12rem] ~pb-[3.31rem]/32'>
       {/* Section Container */}
-      <div className='mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-7xl overflow-x-hidden'>
         {/* Flex container */}
         <div className='flex flex-col items-center sm:flex-row'>
           {/* Image container */}
-          <div className='max-w-[52.25rem]'>
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            variants={variants.slideInLeft}
+            viewport={{ once: true }}
+            className='max-w-[52.25rem]'
+          >
             <Image
               className='size-full object-cover'
               src={assets.box_lifting}
@@ -17,10 +27,16 @@ const WhatWeRepresent = () => {
               placeholder='blur'
               priority={true}
             />
-          </div>
+          </motion.div>
 
           {/* Text container overlapping the image */}
-          <div className='-mt-[6rem] px-[0.69rem] text-white sm:mt-0'>
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            variants={variants.slideInRight}
+            viewport={{ once: true }}
+            className='-mt-[6rem] px-[0.69rem] text-white sm:mt-0'
+          >
             <div className='max-w-[46rem] bg-[#3B3B3B] px-5 ~pt-[2.88rem]/[3.69rem] ~pb-[2.81rem]/[3.62rem] sm:ml-[-25rem] xl:ml-[-19rem]'>
               {/* Container for headings */}
               <div className='mx-auto max-w-[13rem] sm:max-w-full'>
@@ -44,12 +60,12 @@ const WhatWeRepresent = () => {
               {/* Call-to-action button */}
               <a
                 href='#'
-                className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem]'
+                className='mx-auto block max-w-[10.875rem] bg-red-primary text-center font-medium text-white transition-all duration-300 ~mt-6/10 ~px-[1.33rem]/10 ~py-[0.34rem]/[0.62rem] hover:rounded-3xl hover:bg-red-700'
               >
                 Learn More
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
