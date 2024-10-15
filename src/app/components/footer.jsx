@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className='padding-inline bg-[#292D32] bg-footer bg-contain bg-bottom bg-no-repeat pt-[4.75rem] ~pb-[12.58rem]/[16.56rem] sm:pt-[4.13rem]'>
       <div className='mx-auto max-w-7xl text-center text-white ~text-base/lg sm:text-left'>
-        <div className='grid justify-items-center gap-10 sm:grid-cols-3 lg:grid-cols-4'>
+        <div className='grid gap-10 sm:grid-cols-2 lg:grid-cols-4'>
           <div>
             <div className='mx-auto mb-[0.44rem] w-[8.31rem] sm:mx-0'>
               <img className='w-full' src='/jvec_logo.svg' alt='logo' />
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Section */}
-          <div>
+          <div className='sm:-mt-56 lg:mt-0'>
             <h2 className='footer-heading'>QUICK LINKS</h2>
 
             <ul className='space-y-3'>
@@ -127,9 +127,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Us Section */}
-          <div className='text-center sm:text-left'>
-            <div>
+          {/* Follow Us and Contact Us Section */}
+          <div className='grid text-center sm:col-span-2 sm:mt-[3.94rem] sm:grid-cols-2 sm:gap-[4.56rem] sm:text-left lg:col-span-1 lg:mt-0 lg:block'>
+            {/* Contact Us Section */}
+            <div className='sm:order-2'>
               <h2 className='footer-heading'>CONTACT US</h2>
               <div className='space-y-[0.94rem] sm:space-y-3'>
                 <address className='not-italic'>
@@ -158,7 +159,7 @@ const Footer = () => {
             </div>
 
             {/* Follow Us Section */}
-            <div className='~mt-10/14'>
+            <div className='mt-10 sm:mt-0 lg:mt-14'>
               <h2 className='footer-heading'>FOLLOW US</h2>
               <p>
                 Stay connected with us on social media for updates and
