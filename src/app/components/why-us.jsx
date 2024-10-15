@@ -1,5 +1,9 @@
+'use client';
+
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import variants from '@/utils/variants';
 
 // Card Component to display individual sections
 const Card = ({ img, className, heading, hr, children }) => {
@@ -33,9 +37,17 @@ const WhyUs = () => {
   return (
     <section className='mb-[11.2rem] mt-16 bg-why-us bg-cover bg-bottom bg-no-repeat px-5 pb-3 ~pt-[2.31rem]/32 sm:bg-contain'>
       {/* Main container for layout */}
-      <div className='mx-auto flex w-full max-w-[84.38rem] flex-col justify-between gap-5 lg:flex-row'>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        variants={variants.container}
+        className='mx-auto flex w-full max-w-[84.38rem] flex-col justify-between gap-5 lg:flex-row'
+      >
         {/* Left column */}
-        <div className='mx-auto max-w-[25.81rem] lg:mx-0'>
+        <motion.div
+          variants={variants.slideUp}
+          className='mx-auto max-w-[25.81rem] lg:mx-0'
+        >
           <h2 className='section-heading text-[#535558] ~mb-2/6 lg:text-left'>
             WHY CHOOSE US
           </h2>
@@ -55,10 +67,10 @@ const WhyUs = () => {
           >
             Learn More
           </a>
-        </div>
+        </motion.div>
 
         {/* Right column with cards */}
-        <div>
+        <motion.div variants={variants.flipInX}>
           <div className='relative grid max-w-[54rem] flex-col items-start bg-white px-5 shadow-md ~pt-[3.75rem]/[4.26rem] ~pb-[4.17rem]/[6.94rem] sm:grid-cols-2 sm:rounded-[1.2rem] sm:~gap-x-12/[5.31rem] sm:~pl-7/[2.69rem] xl:rounded-[1.375rem]'>
             {/* Card for Exceptional Customer Service */}
             <Card
@@ -102,8 +114,8 @@ const WhyUs = () => {
             {/* Vertical divider between cards on larger screens */}
             <div className='absolute left-[51%] hidden w-[0.5px] bg-black ~top-[2.47rem]/[2.83rem] ~bottom-[3.65rem]/[4.17rem] sm:block' />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

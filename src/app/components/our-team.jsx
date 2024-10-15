@@ -1,5 +1,9 @@
+'use client';
+
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import variants from '@/utils/variants';
 
 // Card Component to display individual cards with an image and caption
 const Card = ({ img, caption }) => {
@@ -26,11 +30,19 @@ const OurTeam = () => {
 
       {/* Section Container */}
       <div className='relative z-[1] mx-auto max-w-7xl text-white'>
-        {/* Section heading */}
-        <h2 className='section-heading mb-2 text-red-500'>Our Team</h2>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          variants={variants.slideUp}
+        >
+          {/* Section heading */}
+          <h2 className='section-heading mb-2 text-red-500'>Our Team</h2>
 
-        {/* Section subheading */}
-        <h3 className='section-subheading'>Highly trained professionals in</h3>
+          {/* Section subheading */}
+          <h3 className='section-subheading'>
+            Highly trained professionals in
+          </h3>
+        </motion.div>
 
         {/* Grid layout for the cards */}
         <div className='grid ~mt-8/[5.81rem] ~gap-6/[2.88rem] sm:grid-cols-3'>
