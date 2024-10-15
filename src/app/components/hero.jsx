@@ -1,8 +1,6 @@
-'use client';
-
-import { Typewriter } from 'react-simple-typewriter'; // Typewriter effect for dynamic text
 import Image from 'next/image';
 import { assets } from '@/assets/assets';
+import TypeWriter from './typewriter';
 
 const Hero = () => {
   return (
@@ -24,7 +22,7 @@ const Hero = () => {
 
             {/* Dynamic text using Typewriter effect */}
             <p className='min-h-8 ~text-base/[1.3125rem] ~my-[0.82rem]/6'>
-              <Typewriter
+              <TypeWriter
                 words={['Professional and affordable. Fully insured.']}
                 loop={false}
               />
