@@ -39,13 +39,14 @@ const Hero = () => {
         </div>
 
         {/* Right side: Image */}
-        <div className='max-w-[42.19rem] [transform:rotateY(180deg)] sm:rotate-0 xl:[transform:rotateY(180deg)]'>
+        <div className='w-full max-w-[42.19rem] [transform:rotateY(180deg)] sm:rotate-0 xl:[transform:rotateY(180deg)]'>
           <Image
             className='size-full object-cover'
             src={assets.box_holding}
             alt='Movers holding boxes'
             placeholder='blur'
             priority={true}
+        
           />
         </div>
       </div>
