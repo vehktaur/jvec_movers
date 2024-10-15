@@ -56,8 +56,20 @@ The project contains sections with interactive features and smooth animations.
 ### Folder Structure
 
 The folder structure is as follows:
+
+```
 src/
-src/ ├── app/ │ ├── components/ │ ├── layout.js │ └── page.js ├── assets/ │ ├── images/ │ └── icons.jsx └── utils/ └── variants.js
+├── app/
+│ ├── components/
+│ ├── layout.js
+│ └── page.js
+├── assets/
+│ ├── images/
+│ └── icons.jsx
+└── utils/
+└── variants.js
+
+```
 
 - app/ contains the main application components, layout, and page files.
 - assets/ holds images and icons used throughout the site.
