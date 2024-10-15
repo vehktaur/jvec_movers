@@ -2,6 +2,7 @@
 
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ClientsWeServe = () => {
@@ -45,7 +46,13 @@ const ClientsWeServe = () => {
         <h3 className='section-subheading'>Our services cater to</h3>
 
         {/* Swiper component for client slides */}
-        <Swiper className='~mt-8/20' slidesPerView={'auto'} spaceBetween={20}>
+        <Swiper
+          modules={[Autoplay]}
+          className='~mt-8/20'
+          slidesPerView={'auto'}
+          autoplay={(true, { delay: 2000 })}
+          spaceBetween={20}
+        >
           {clients.map(({ title, description, icon }, index) => (
             <SwiperSlide
               key={index}
