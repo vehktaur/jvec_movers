@@ -11,14 +11,14 @@ const WhatWeRepresent = () => {
       {/* Section Container */}
       <div className='mx-auto max-w-7xl overflow-x-hidden'>
         {/* Flex container */}
-        <div className='flex flex-col items-center sm:flex-row'>
+        <div className='flex flex-col items-center justify-center sm:flex-row'>
           {/* Image container */}
           <motion.div
             initial='hidden'
             whileInView='visible'
             variants={variants.slideInLeft}
             viewport={{ once: true }}
-            className='max-w-[52.25rem]'
+            className='max-w-[42.25rem] w-full'
           >
             <Image
               className='size-full object-cover'
@@ -35,7 +35,7 @@ const WhatWeRepresent = () => {
             whileInView='visible'
             variants={variants.slideInRight}
             viewport={{ once: true }}
-            className='-mt-[6rem] px-[0.69rem] text-white sm:mt-0'
+            className='-mt-[6rem] relative z-[2] px-[0.69rem] text-white sm:mt-0'
           >
             <div className='max-w-[46rem] bg-[#3B3B3B] px-5 ~pt-[2.88rem]/[3.69rem] ~pb-[2.81rem]/[3.62rem] sm:ml-[-25rem] xl:ml-[-19rem]'>
               {/* Container for headings */}
